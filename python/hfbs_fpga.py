@@ -15,7 +15,6 @@ import utils
 #flags
 RUN_FPGA = False
 VERBOSE = True
-SMALL = True
 FIXEDP = True
 LOOP_OUTSIDE = False
 NO_GARBAGE_ADDED = True
@@ -35,14 +34,9 @@ A_VERT_DIAG_MIN = 1e-3
 NUM_PCG_ITERS = 100
 NUM_NEIGHBORS = 6
 
-if SMALL:
-    reference = 'img/reference_sm.png'
-    target = 'img/input0_sm.png'
-    confidence = 'img/weight_sm.png'
-else:
-    reference = 'img/Motorcycle/reference.png'
-    target = 'img/Motorcycle/input.png'
-    confidence = 'img/Motorcycle/weight.png'
+reference = '../data/depth_superres/reference.png'
+target = '../data/depth_superres/target.png'
+confidence = '../data/depth_superres/confidence.png'
 
 # FPGA-specific constants, yours may be different
 c2h_str = "/dev/xdma/card0/c2h0"

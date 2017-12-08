@@ -24,9 +24,9 @@ A_VERT_DIAG_MIN = 1e-3
 NUM_PCG_ITERS = 30
 NUM_NEIGHBORS = 6
 
-reference = 'data/depth_superres/reference.png'
-target = 'data/depth_superres/target.png'
-confidence = 'data/depth_superres/confidence.png'
+reference = '../data/depth_superres/reference.png'
+target = '../data/depth_superres/target.png'
+confidence = '../data/depth_superres/confidence.png'
 
 def prepare_flow(reference, flow_tuple, confidence):
     reference_image = np.array(plt.imread(reference, format='png'), dtype=np.float32)*256
